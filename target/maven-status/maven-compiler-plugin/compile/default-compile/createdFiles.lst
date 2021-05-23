@@ -1,0 +1,13 @@
+SkiType.class
+main.class
+Client.class
+SuperAdmin.class
+ManagmentOfClients.class
+Equipment.class
+Snowboard.class
+Managment.class
+EquipmentTypeEnum.class
+ManagmentOfEquipment.class
+Ski.class
+ManagmentOfRents.class
+Rent.class
