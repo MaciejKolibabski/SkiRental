@@ -18,6 +18,7 @@ public class Rent {
         this.equipment1 = equipment1;
     }
 
+    //gettery
     public int getRentID() {
         return rentID;
     }
@@ -42,4 +43,16 @@ public class Rent {
         return Equipment.getActualRentalPrice() * getRentDays();
     }
 
+    @Override
+    public String toString() {
+        return "Rent{" +
+                "rentID=" + rentID +
+                ", beginTime=" + beginTime +
+                ", endTime=" + endTime +
+                ", rentCost=" + rentCost +
+                ", client=" + client +
+                ", equipment=" + equipment +
+                ", equipment1=" + equipment1 +
+                '}';
+    }
 }

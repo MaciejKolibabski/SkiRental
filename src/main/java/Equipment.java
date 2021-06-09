@@ -1,4 +1,3 @@
-
 public  class Equipment {
     private String nazwa;
     private int equipmentID;
@@ -35,5 +34,14 @@ public  class Equipment {
 
     public void getEquipmentInfo() {
 
+    }
+
+    @Override
+    public String toString() {
+        return "Equipment{" +
+                "nazwa='" + nazwa + '\'' +
+                ", equipmentID=" + equipmentID +
+                ", Rented=" + Rented +
+                '}';
     }
 }

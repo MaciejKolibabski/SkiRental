@@ -5,6 +5,7 @@ public class Client {
     String lastName;
     String personalID;
 
+    //konstruktor
     public Client(int clientID, String firstName, String lastName, String personalID) {
         this.clientID = clientID;
         this.firstName = firstName;
@@ -16,7 +17,7 @@ public class Client {
     public int getClientID() {
         return clientID;
     }
-
+//gettery
     public String getFirstName() {
         return firstName;
     }
@@ -27,5 +28,16 @@ public class Client {
 
     public String getPersonalID() {
         return personalID;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Client{" +
+                "clientID=" + clientID +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", personalID='" + personalID + '\'' +
+                '}';
     }
 }

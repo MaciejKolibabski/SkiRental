@@ -4,16 +4,17 @@ import java.util.List;
 import java.util.Random;
 
 public class ManagmentOfEquipment implements Managment<Equipment>{
-    private final List<Equipment> equipmentmanage = new ArrayList<Equipment>();
+    List<Equipment> equipmentmanage = new ArrayList<Equipment>();
 
 
     Random random = new Random();
     boolean wolne = true;
-
     int equipmentid = random.nextInt(10000);
     Equipment [] tabEQUIPMENT = new Equipment[11];
     Ski [] tabSKI = new Ski[5];
     Snowboard [] tabSNOWBOARD = new Snowboard[5];
+
+
 
     @Override
     public boolean dodaj(Equipment obj) {
@@ -21,11 +22,7 @@ public class ManagmentOfEquipment implements Managment<Equipment>{
         return true;
     }
 
-    @Override
-    public boolean usun(Equipment obj) {
-        equipmentmanage.remove(obj);
-        return false;
-    }
+
 
 
     void dodawanie() {
@@ -83,11 +80,11 @@ public class ManagmentOfEquipment implements Managment<Equipment>{
 
 
     void dodawanieSnowboardu() {
-        Snowboard snowboard1 = new Snowboard("Snow1", 98, true, Equipment.basePrice,"38", "FreeRide");
-        Snowboard snowboard2 = new Snowboard("Snow2", 98, true, Equipment.basePrice,"41", "Boardercross");
-        Snowboard snowboard3 = new Snowboard("Snow3", 98, true, Equipment.basePrice,"43", "All Mountain");
-        Snowboard snowboard4 = new Snowboard("Snow4", 98, true, Equipment.basePrice,"37", "FreeRide");
-        Snowboard snowboard5 = new Snowboard("Snow5", 98, true, Equipment.basePrice,"44", "Freestyle");
+        Snowboard snowboard1 = new Snowboard("Snow1", 91, true, Equipment.basePrice,"38", "FreeRide");
+        Snowboard snowboard2 = new Snowboard("Snow2", 92, true, Equipment.basePrice,"41", "Boardercross");
+        Snowboard snowboard3 = new Snowboard("Snow3", 93, true, Equipment.basePrice,"43", "All Mountain");
+        Snowboard snowboard4 = new Snowboard("Snow4", 94, true, Equipment.basePrice,"37", "FreeRide");
+        Snowboard snowboard5 = new Snowboard("Snow5", 95, true, Equipment.basePrice,"44", "Freestyle");
         dodaj(snowboard1);
         dodaj(snowboard2);
         dodaj(snowboard3);
@@ -100,10 +97,8 @@ public class ManagmentOfEquipment implements Managment<Equipment>{
         tabSNOWBOARD[4]= snowboard5;
     }
 
-
     @Override
     public List<Equipment> policz() {
         return Collections.unmodifiableList(equipmentmanage);
     }
-
 }

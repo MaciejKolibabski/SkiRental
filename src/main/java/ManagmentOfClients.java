@@ -3,6 +3,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class ManagmentOfClients implements Managment<Client> {
+    //metody override
     List<Client> clients = new ArrayList<Client>();
     @Override
     public boolean dodaj(Client obj) {
@@ -10,11 +11,7 @@ public class ManagmentOfClients implements Managment<Client> {
         return true;
     }
 
-    @Override
-    public boolean usun(Client obj) {
-        clients.remove(obj);
-        return true;
-    }
+
 
     @Override
     public List<Client> policz() {
